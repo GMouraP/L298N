@@ -3,9 +3,9 @@
  * Created by Gustavo M. Pereira, May 04, 2017.
 */
 
-#include <l298n.h>
+#include <L298N.h>
 
-l298n motoresAB(11,10,6,5);
+L298N motoresAB(11,10,6,5);
 
 void setup() {
 }
