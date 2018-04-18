@@ -27,7 +27,7 @@ class L298N {
          _INB1,
          _INB2,
          _directionA,
-         _directionB;
+         _directionB,
          _ENA,
          _ENB;
 };
