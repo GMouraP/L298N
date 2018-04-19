@@ -65,13 +65,13 @@ void L298N::brakeMotors(long ms) {
     do {
       // Devido aos limites do PWM do Arduino, os valores de saída são ajustados para os valores das velocidades atuais
       // para que os motores freem sem perder sua direção ou pular para velocidades altas apenas para frear.
-      _speedA = map(x, 0, ms, 0, _speedA);
-      _speedB = map(x, 0, ms, 0, _speedB);
+      _speedA = map(x, 0, ms, 0, 255);
+      _speedB = map(x, 0, ms, 0, 255);
       analogWrite(_ENA, _speedA);
       analogWrite(_ENB, _speedB);
 
       deltaT = millis() - T0;
-      x--;
+      x = ms - millis();
     } while(deltaT < ms);
   }
   else{ 
